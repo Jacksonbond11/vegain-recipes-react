@@ -13,13 +13,16 @@ const APISearch = (props) => {
   const handleSearch = async () => {
     setSearching(true);
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/gpt/call-gpt", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ query }),
-      });
+      const response = await fetch(
+        "http://24.144.94.207:5000/api/gpt/call-gpt",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ query }),
+        }
+      );
 
       if (response.ok) {
         let fetchedData = await response.json();

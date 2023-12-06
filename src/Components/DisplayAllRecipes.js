@@ -12,7 +12,7 @@ const DisplayAllRecipes = () => {
     setSearching(true);
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/api/recipes/recipes",
+        "http://24.144.94.207:5000/api/recipes/recipes",
         {
           method: "GET",
           headers: {
