@@ -14,7 +14,7 @@ const APISearch = (props) => {
     setSearching(true);
     try {
       const response = await fetch(
-        "http://24.144.94.207:5000/api/gpt/call-gpt",
+        "https://24.144.94.207:5000/api/gpt/call-gpt",
         {
           method: "POST",
           headers: {
