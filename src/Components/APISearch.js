@@ -14,7 +14,7 @@ const APISearch = (props) => {
     setSearching(true);
     try {
       const response = await fetch(
-        "https://api.veganrecipes.com:5000/api/gpt/call-gpt",
+        "https://api.veganrecipes.com/api/gpt/call-gpt",
         {
           method: "POST",
           headers: {

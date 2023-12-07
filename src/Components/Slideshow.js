@@ -9,7 +9,7 @@ export default function SimpleSlider() {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        "https://api.veganrecipes.com:5000/api/recipes/recipes",
+        "https://api.veganrecipes.com/api/recipes/recipes",
         {
           method: "GET",
           headers: {
