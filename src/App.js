@@ -60,7 +60,7 @@ function App() {
             <>
               {" "}
               <Header />
-              <ShoppingList />
+              <h1>Coming soon...</h1>
               <Footer />
             </>
           }
