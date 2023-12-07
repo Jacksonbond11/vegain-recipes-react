@@ -7,12 +7,15 @@ const List = () => {
   const getList = async () => {
     setSearching(true);
     try {
-      const response = await fetch("https://24.144.94.207:5000/api/list/list", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://api.veganrecipes.com:5000/api/list/list",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (response.ok) {
         let shoppingListText = await response.text();
