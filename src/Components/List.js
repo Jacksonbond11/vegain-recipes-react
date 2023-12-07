@@ -8,7 +8,7 @@ const List = () => {
     setSearching(true);
     try {
       const response = await fetch(
-        "https://api.veganrecipes.com/api/list/list",
+        "https://api.vegainrecipes.com/api/list/list",
         {
           method: "POST",
           headers: {
