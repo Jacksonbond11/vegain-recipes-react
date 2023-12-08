@@ -21,7 +21,6 @@ export default function SimpleSlider() {
       if (response.ok) {
         let recipes = await response.json();
         setRecipes(recipes);
-        console.log(recipes[0].image);
       } else {
         setError("An error occurred while searching. Please try again.");
       }
