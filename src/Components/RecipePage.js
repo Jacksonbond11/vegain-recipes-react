@@ -45,9 +45,7 @@ function RecipePage() {
   return (
     <div>
       <Header />
-      <button className="btn btn-ghost mx-[410px]" onClick={navigateBack}>
-        Recipes
-      </button>
+
       <div className="flex justify-center py-4">
         <div className="card w-[800px] bg-base-100 shadow-xl">
           <div style={{ height: "400px", overflow: "hidden" }}>
@@ -75,6 +73,9 @@ function RecipePage() {
               ))}
             </ul>
           </div>
+          <button className="btn btn-ghost mx-[410px]" onClick={navigateBack}>
+            Back
+          </button>
         </div>
       </div>
     </div>
