@@ -27,9 +27,6 @@ const DisplayRecipe = () => {
         </ol>
         <h2 className="font-bold">Description:</h2>
         <p>{recipe.description}</p>
-        {/* <div className="card-actions justify-end">
-          <button className="btn btn-primary">Listen</button>
-        </div> */}
       </div>
     </div>
   );

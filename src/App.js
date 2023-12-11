@@ -1,10 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./Pages/HomePage";
 import Recipes from "./Pages/Recipes";
 import ShoppingList from "./Pages/ShoppingList";
 import Header from "./Components/Header";
-import APISearch from "./Components/APISearch";
 import Welcome from "./Components/Welcome";
 import Footer from "./Components/Footer";
 import { RecipeProvider } from "./Components/RecipeContext";
@@ -12,6 +10,7 @@ import DisplayRecipe from "./Components/DisplayRecipe";
 import DisplayAllRecipes from "./Components/DisplayAllRecipes";
 import List from "./Components/List";
 import Slideshow from "./Components/Slideshow";
+import RecipePage from "./Components/RecipePage";
 
 function App() {
   return (
@@ -65,6 +64,7 @@ function App() {
             </>
           }
         />
+        <Route path="/recipes/:recipeId" element={<RecipePage />} />
       </Routes>
     </Router>
   );
