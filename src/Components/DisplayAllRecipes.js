@@ -18,8 +18,8 @@ const DisplayAllRecipes = () => {
     setSearching(true);
     try {
       const response = await fetch(
-        // "https://api.vegainrecipes.com/api/recipes/recipes",
-        "http://127.0.0.1:5000/api/recipes/recipes",
+        "https://api.vegainrecipes.com/api/recipes/recipes",
+        //"http://127.0.0.1:5000/api/recipes/recipes",
         {
           method: "GET",
           headers: {
