@@ -9,6 +9,7 @@ const List = () => {
     try {
       const response = await fetch(
         "https://api.vegainrecipes.com/api/list/list",
+        //"http://127.0.0.1:5000/api/list/list",
         {
           method: "POST",
           headers: {

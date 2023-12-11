@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Spinner from "./spinner";
 import { useContext } from "react";
 import { RecipeContext } from "./RecipeContext";
 
@@ -15,6 +14,7 @@ const APISearch = (props) => {
     try {
       const response = await fetch(
         "https://api.vegainrecipes.com/api/gpt/call-gpt",
+        //"http://127.0.0.1:5000/api/gpt/call-gpt",
         {
           method: "POST",
           headers: {

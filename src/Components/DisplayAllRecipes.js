@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RecipeModal from "./RecipeModal";
 import Spinner from "./spinner";
+import { useNavigate } from "react-router-dom";
 
 const DisplayAllRecipes = () => {
   const [searching, setSearching] = useState(false);
@@ -8,11 +9,17 @@ const DisplayAllRecipes = () => {
   const [recipes, setRecipes] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const navigate = useNavigate();
+  const viewRecipe = (recipeId) => {
+    navigate(`/recipes/${recipeId}`);
+  };
+
   const handleSearch = async () => {
     setSearching(true);
     try {
       const response = await fetch(
         "https://api.vegainrecipes.com/api/recipes/recipes",
+        //"http://127.0.0.1:5000/api/recipes/recipes",
         {
           method: "GET",
           headers: {
@@ -67,7 +74,7 @@ const DisplayAllRecipes = () => {
               <div className="card-actions justify-end">
                 <button
                   className="btn btn-secondary"
-                  onClick={() => openModal(recipe)}
+                  onClick={() => viewRecipe(recipe.id)}
                 >
                   View Recipe
                 </button>

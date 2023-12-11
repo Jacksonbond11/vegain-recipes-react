@@ -10,6 +10,7 @@ export default function SimpleSlider() {
     try {
       const response = await fetch(
         "https://api.vegainrecipes.com/api/recipes/recipes",
+        //"http://127.0.0.1:5000/api/recipes/recipes",
         {
           method: "GET",
           headers: {
