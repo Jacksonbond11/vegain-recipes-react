@@ -20,12 +20,16 @@ function RecipePage() {
 
   async function fetchRecipeData(id) {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/recipe/${id}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://api.vegainrecipes.com/api/recipe/${id}",
+        {
+          // ` http://127.0.0.1:5000/api/recipe/${id}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const data = await response.json();
 
       if (data && data.ingredients) {
