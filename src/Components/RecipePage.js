@@ -21,7 +21,7 @@ function RecipePage() {
   async function fetchRecipeData(id) {
     try {
       const response = await fetch(
-        "https://api.vegainrecipes.com/api/recipe/${id}",
+        `https://api.vegainrecipes.com/api/recipe/${id}`,
         {
           // ` http://127.0.0.1:5000/api/recipe/${id}`, {
           method: "GET",
