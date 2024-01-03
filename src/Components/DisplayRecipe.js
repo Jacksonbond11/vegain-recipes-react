@@ -7,7 +7,7 @@ const DisplayRecipe = () => {
     return <div></div>;
   }
   return (
-    <div className="card lg:card-side bg-base-100 shadow-xl max-w-[70vw] m-auto bg-secondary">
+    <div className="card lg:card-side bg-base-100 shadow-xl max-w-[70vw] m-auto bg-neutral">
       <figure>
         <img src={recipe.image} alt={recipe.name} />
       </figure>

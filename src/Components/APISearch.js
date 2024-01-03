@@ -65,7 +65,7 @@ const APISearch = (props) => {
         {searching && (
           <div>
             <div className="flex justify-center">
-              <p>
+              <p className="text-white">
                 Using artificial intelligence to think of a delicious recipe...
               </p>
               <span className="loading loading-spinner loading-md"></span>

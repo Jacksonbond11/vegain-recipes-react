@@ -15,58 +15,44 @@ import RecipePage from "./Components/RecipePage";
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              {" "}
-              <Header />
-              <RecipeProvider>
-                <Welcome />
-                <DisplayRecipe />
-                <FeaturedRecipes />
-                <Footer />
-              </RecipeProvider>
-            </>
-          }
-        />
-        <Route
-          path="/shoppinglist"
-          element={
-            <>
-              {" "}
-              <Header />
-              <ShoppingList />
-              <List />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/recipes"
-          element={
-            <>
-              {" "}
-              <Header />
-              <Recipes />
-              <DisplayAllRecipes />
-            </>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <>
-              {" "}
-              <Header />
-              <h1>Coming soon...</h1>
-              <Footer />
-            </>
-          }
-        />
-        <Route path="/recipes/:recipeId" element={<RecipePage />} />
-      </Routes>
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <div className="flex-grow">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <RecipeProvider>
+                  <Welcome />
+                  <DisplayRecipe />
+                  <FeaturedRecipes />
+                </RecipeProvider>
+              }
+            />
+            <Route
+              path="/shoppinglist"
+              element={
+                <>
+                  <ShoppingList />
+                  <List />
+                </>
+              }
+            />
+            <Route
+              path="/recipes"
+              element={
+                <>
+                  <Recipes />
+                  <DisplayAllRecipes />
+                </>
+              }
+            />
+            <Route path="/contact" element={<h1>Coming soon...</h1>} />
+            <Route path="/recipes/:recipeId" element={<RecipePage />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </Router>
   );
 }
