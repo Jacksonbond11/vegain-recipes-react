@@ -9,7 +9,7 @@ import { RecipeProvider } from "./Components/RecipeContext";
 import DisplayRecipe from "./Components/DisplayRecipe";
 import DisplayAllRecipes from "./Components/DisplayAllRecipes";
 import List from "./Components/List";
-import Slideshow from "./Components/Slideshow";
+import FeaturedRecipes from "./Components/FeaturedRecipes";
 import RecipePage from "./Components/RecipePage";
 
 function App() {
@@ -25,8 +25,9 @@ function App() {
               <RecipeProvider>
                 <Welcome />
                 <DisplayRecipe />
+                <FeaturedRecipes />
+                <Footer />
               </RecipeProvider>
-              <Slideshow />
             </>
           }
         />
