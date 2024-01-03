@@ -45,8 +45,6 @@ function RecipePage() {
 
   return (
     <div>
-      <Header />
-
       <div className="flex justify-center py-4 px-4">
         <div className="card max-w-full md:max-w-xl lg:max-w-2xl bg-base-100 shadow-xl">
           <div className="h-64 overflow-hidden">
